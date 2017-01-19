@@ -5,11 +5,7 @@ from email.mime.text import MIMEText
 import ConfigParser
 
 def logOutput(output):
-	print '[PRICEALERT]: {0}'.format(output)
-
-#TARGET_PRICE = 750
-#AMAZON_LINK = 'http://www.amazon.com/Dell-Inspiron-i7559-2512BLK-Generation-GeForce/dp/B015PYYDMQ'
-#AMAZON_PRODUCT = 'Dell Inspiron i7559'
+	print '[AMAZON PRICE ALERT]: {0}'.format(output)
 
 config = ConfigParser.ConfigParser()
 config.read('config.ini')
@@ -32,7 +28,7 @@ amazon_price_obj = soup.find('span', 'a-size-base a-color-price offer-price a-te
 try:
 	#if the price was unable to be found, amazon_price_obj is type 'NoneType', and the below command will throw an exception
 	AMAZON_PRICE = float(amazon_price_obj.string.split('$')[1])
-except AttributeError:
+except:
 	logOutput('Price unavailable')
 	AMAZON_PRICE = TARGET_PRICE + 1
 
