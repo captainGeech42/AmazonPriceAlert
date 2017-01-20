@@ -14,6 +14,7 @@ TARGET_PRICE = int(config.get('AmazonSettings', 'TARGET_PRICE'))
 AMAZON_LINK = config.get('AmazonSettings', 'AMAZON_LINK')
 AMAZON_PRODUCT = config.get('AmazonSettings', 'AMAZON_PRODUCT')
 
+RECEPIENT_EMAIL = config.get('EmailSettings', 'RECEPIENT_EMAIL')
 SENDER_EMAIL = config.get('EmailSettings', 'SENDER_EMAIL')
 SENDER_PASSWORD = config.get('EmailSettings', 'SENDER_PASSWORD')
 SMTP_SERVER = config.get('EmailSettings', 'SMTP_SERVER')
