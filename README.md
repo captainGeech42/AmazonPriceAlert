@@ -1,4 +1,4 @@
-##Amazon Price Alert script##
+# Amazon Price Alert script
 
 This script will send you an email when the price for a specific item on Amazon drops beneath a certain threshold
 
